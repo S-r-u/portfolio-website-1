@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6HkXyD16dRAeUmqqgH5J97J8fqs6UtowkS7rsg6ZlS/xQy/tKceRxXbJtd" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #e63232;
+        }
+
+        header {
+            background: #b274f5;
+            color: #fff;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #fff6a8;
+            color: #fff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #d7aefb, #f3a683);
+            color: white;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #f3a683;
+            color: #fff;
+        }
+
+        .hero .resume-btn {
+            margin-left: 10px;
+            background: #f3a683;
+            color: #fff;
+        }
+
+        .hero .resume-btn:hover {
+            background: #d7aefb;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        #about {
+            background: #fff0f5;
+        }
+
+        #skills {
+            background: linear-gradient(to bottom, #f3a683, #f8edeb);
+            padding: 60px 20px;
+        }
+
+        #skills h2 {
+            color: #f066fa;
+            margin-bottom: 20px;
+        }
+
+        #skills .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #skills .skill {
+            margin: 15px;
+            padding: 20px;
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 200px;
+        }
+
+        #skills .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        #skills .skill h3 {
+            color: #d77fa1;
+            margin-bottom: 10px;
+        }
+
+        #skills .skill p {
+            font-size: 0.9rem;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact input, #contact textarea, #contact button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            background: #a988cc;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #contact button:hover {
+            background: #f3a683;
+        }
+
+        footer {
+            text-align: center;
+            background: #9adf2b;
+            color: #fff;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm [Your Name], a passionate web developer.</p>
+        <a href="#about" class="btn">Discover More</a>
+        <button class="btn resume-btn" id="download-resume">Download My Resume</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a dedicated and enthusiastic web developer with a knack for creating clean and efficient code. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML5</h3>
+                <p>Expert in building structured and semantic web pages using HTML5 standards.</p>
+            </div>
+            <div class="skill">
+                <h3>CSS3</h3>
+                <p>Proficient in creating responsive and visually appealing designs with CSS3.</p>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Skilled in adding dynamic functionality and interactivity to websites using JavaScript.</p>
+            </div>
+            <div class="skill">
+                <h3>React.js</h3>
+                <p>Experience in building scalable and reusable components with React.js.</p>
+            </div>
+            <div class="skill">
+                <h3>Node.js</h3>
+                <p>Knowledgeable in developing backend services and APIs with Node.js.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6L/10FVRsM+3zZt0n6Xg4hVmDSp5Q2wC5pI5Q8tqfgfsjZ8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0p4kIkMjlq5rmYz/4+YB+QH+Y66Le5cF6GLyT9zmTj/AdJxw" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! I will get back to you soon.');
+        });
+
+        document.getElementById('download-resume').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = 'resume.pdf'; // Replace with the actual path to your resume
+            link.download = 'My_Resume.pdf';
+            link.click();
+        });
+    </script>
+</body>
+</html>
